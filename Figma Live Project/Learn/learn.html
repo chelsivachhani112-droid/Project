@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Education | Finova</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .course-card { transition: all 0.3s ease; border: 1px solid #e2e8f0; }
+        .course-card:hover { transform: translateY(-4px); box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.08); }
+        .badge-intermediate { background-color: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+        .badge-beginner { background-color: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+    </style>
+</head>
+<body class="bg-[#f8fafc] text-slate-900 pb-20">
+
+    <nav class="bg-white border-b sticky top-0 z-50 px-6 h-16 flex justify-between items-center shadow-sm">
+        <div class="flex items-center gap-2 font-bold text-xl text-blue-600">
+            <i data-lucide="shield-check"></i> FINOVA
+        </div>
+        <div class="flex gap-8 text-sm font-medium text-slate-600">
+            <a href="analyzer.html" class="hover:text-blue-600 transition">Analyzer</a>
+            <a href="goals.html" class="hover:text-blue-600 transition">Goals</a>
+            <a href="education.html" class="text-blue-600 border-b-2 border-blue-600 pb-5 mt-5">Education</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-6 py-10">
+        <header class="mb-10">
+            <h1 class="text-3xl font-bold mb-2">Financial Education</h1>
+            <p class="text-slate-500">Build expertise in banking and personal finance</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <span class="absolute top-4 right-4 text-[10px] badge-intermediate px-2 py-1 rounded font-bold uppercase">Intermediate</span>
+                <div class="w-12 h-12 bg-purple-50 text-purple-600 flex items-center justify-center rounded-xl mb-4"><i data-lucide="brain"></i></div>
+                <h3 class="text-lg font-bold mb-2 leading-tight">AI-Driven Financial Decision Making</h3>
+                <p class="text-slate-500 text-sm mb-6">Leverage AI tools for smarter financial decisions</p>
+                <div class="flex gap-4 text-xs text-slate-400 mb-6">
+                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 2.5 hrs</span>
+                    <span class="flex items-center gap-1"><i data-lucide="layout" class="w-3 h-3"></i> 7 modules</span>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition">Start Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <span class="absolute top-4 right-4 text-[10px] badge-intermediate px-2 py-1 rounded font-bold uppercase">Intermediate</span>
+                <div class="w-12 h-12 bg-blue-50 text-blue-600 flex items-center justify-center rounded-xl mb-4"><i data-lucide="target"></i></div>
+                <h3 class="text-lg font-bold mb-2 leading-tight">Goal-Based Financial Planning</h3>
+                <p class="text-slate-500 text-sm mb-6">Execute plans aligned with life goals</p>
+                <div class="flex gap-4 text-xs text-slate-400 mb-6">
+                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 4 hrs</span>
+                    <span class="flex items-center gap-1"><i data-lucide="layout" class="w-3 h-3"></i> 11 modules</span>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition">Start Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <span class="absolute top-4 right-4 text-[10px] badge-beginner px-2 py-1 rounded font-bold uppercase">Beginner</span>
+                <div class="w-12 h-12 bg-orange-50 text-orange-500 flex items-center justify-center rounded-xl mb-4"><i data-lucide="shield-check"></i></div>
+                <h3 class="text-lg font-bold mb-2 leading-tight">Emergency Fund & Risk Management</h3>
+                <p class="text-slate-500 text-sm mb-6">Build a robust fund for ultimate security</p>
+                <div class="flex gap-4 text-xs text-slate-400 mb-6">
+                    <span class="flex items-center gap-1"><i data-lucide="clock" class="w-3 h-3"></i> 2 hrs</span>
+                    <span class="flex items-center gap-1"><i data-lucide="layout" class="w-3 h-3"></i> 6 modules</span>
+                </div>
+                <button class="w-full bg-blue-600 text-white py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition">Start Learning</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="bg-white p-8 rounded-2xl border border-slate-200 h-fit">
+                <h3 class="text-xl font-bold mb-1">Your Progress</h3>
+                <p class="text-slate-400 text-sm mb-8">Overall learning journey</p>
+                <div class="space-y-8">
+                    <div>
+                        <div class="flex justify-between text-sm mb-2 font-medium"><span>Courses Started</span><span>2 of 12</span></div>
+                        <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-blue-500 h-full rounded-full" style="width: 16%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-2 font-medium"><span>Modules Completed</span><span>14 of 92</span></div>
+                        <div class="w-full bg-slate-100 h-2 rounded-full"><div class="bg-green-500 h-full rounded-full" style="width: 15%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-2 bg-white p-8 rounded-2xl border border-slate-200">
+                <h3 class="text-xl font-bold mb-1">Recommended Learning Path</h3>
+                <p class="text-slate-400 text-sm mb-8">Follow this sequence for best results</p>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-green-50 border border-green-100">
+                        <div class="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center"><i data-lucide="check" class="w-5 h-5"></i></div>
+                        <div class="flex-1"><h4 class="font-bold text-sm">Foundations</h4><p class="text-xs text-slate-500">6 weeks • 2 courses</p></div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-xl bg-white border border-slate-200">
+                        <div class="w-8 h-8 rounded-full border-2 border-slate-200 flex items-center justify-center text-slate-400 text-xs font-bold">2</div>
+                        <div class="flex-1"><h4 class="font-bold text-sm text-slate-700">Budgeting & Planning</h4><p class="text-xs text-slate-500">4 weeks • 2 courses</p></div>
+                        <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase">Current</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="text-2xl font-bold mb-8">Full Catalog</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-10 h-10 bg-blue-50 text-blue-600 flex items-center justify-center rounded-lg"><i data-lucide="wallet"></i></div>
+                    <div class="text-blue-600 font-bold text-sm">65%</div>
+                </div>
+                <h4 class="font-bold mb-2">Personal Finance Architecture</h4>
+                <div class="w-full bg-slate-100 h-1 rounded-full mb-4"><div class="bg-blue-600 h-full w-[65%]"></div></div>
+                <p class="text-slate-500 text-xs mb-6">Build a solid foundation for managing finances effectively</p>
+                <button class="w-full border border-blue-600 text-blue-600 py-2 rounded-xl font-medium hover:bg-blue-50 transition">Continue Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <div class="flex justify-between items-start mb-4">
+                    <div class="w-10 h-10 bg-green-50 text-green-600 flex items-center justify-center rounded-lg"><i data-lucide="pie-chart"></i></div>
+                    <div class="text-blue-600 font-bold text-sm">30%</div>
+                </div>
+                <h4 class="font-bold mb-2">Smart Budgeting & Expense Optimization</h4>
+                <div class="w-full bg-slate-100 h-1 rounded-full mb-4"><div class="bg-blue-600 h-full w-[30%]"></div></div>
+                <p class="text-slate-500 text-xs mb-6">Master budgeting techniques and monthly optimization</p>
+                <button class="w-full border border-blue-600 text-blue-600 py-2 rounded-xl font-medium hover:bg-blue-50 transition">Continue Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <span class="absolute top-4 right-4 text-[10px] badge-intermediate px-2 py-1 rounded font-bold uppercase">Intermediate</span>
+                <div class="w-10 h-10 bg-indigo-50 text-indigo-600 flex items-center justify-center rounded-lg mb-4"><i data-lucide="trending-up"></i></div>
+                <h4 class="font-bold mb-2">Investment Foundations</h4>
+                <p class="text-slate-500 text-xs mb-6">Understand stocks, mutual funds, and ETFs</p>
+                <div class="text-[10px] text-slate-400 mb-6"><i data-lucide="clock" class="inline w-3 h-3 mr-1"></i> 4 hrs</div>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-xl font-medium hover:bg-blue-700 transition">Start Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <span class="absolute top-4 right-4 text-[10px] badge-intermediate px-2 py-1 rounded font-bold uppercase">Intermediate</span>
+                <div class="w-10 h-10 bg-cyan-50 text-cyan-600 flex items-center justify-center rounded-lg mb-4"><i data-lucide="file-text"></i></div>
+                <h4 class="font-bold mb-2">Tax Awareness & Financial Compliance</h4>
+                <p class="text-slate-500 text-xs mb-6">Navigate tax planning and compliance in India</p>
+                <div class="text-[10px] text-slate-400 mb-6"><i data-lucide="clock" class="inline w-3 h-3 mr-1"></i> 3 hrs</div>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-xl font-medium hover:bg-blue-700 transition">Start Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <div class="w-10 h-10 bg-slate-50 flex items-center justify-center rounded-lg mb-4 text-2xl">📊</div>
+                <h4 class="font-bold mb-1">Budgeting Basics</h4>
+                <span class="text-[10px] text-green-600 font-bold uppercase bg-green-50 px-2 rounded">Beginner</span>
+                <p class="text-slate-500 text-xs my-4">Fundamentals of creating and managing a personal budget</p>
+                <div class="text-[10px] text-slate-400 mb-6 font-medium"><i data-lucide="clock" class="inline w-3 h-3 mr-1"></i> 15 min</div>
+                <button class="w-full bg-[#c2410c] text-white py-2 rounded-xl font-medium hover:bg-[#9a3412] transition">Start Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <div class="w-10 h-10 bg-slate-50 flex items-center justify-center rounded-lg mb-4 text-2xl">💳</div>
+                <h4 class="font-bold mb-1">Debt Management Strategies</h4>
+                <span class="text-[10px] text-orange-600 font-bold uppercase bg-orange-50 px-2 rounded">Intermediate</span>
+                <p class="text-slate-500 text-xs my-4">Strategies to pay off debt and avoid future problems</p>
+                <div class="text-[10px] text-slate-400 mb-6 font-medium"><i data-lucide="clock" class="inline w-3 h-3 mr-1"></i> 20 min</div>
+                <button class="w-full bg-[#c2410c] text-white py-2 rounded-xl font-medium hover:bg-[#9a3412] transition">Start Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <span class="absolute top-4 right-4 text-[10px] badge-intermediate px-2 py-1 rounded font-bold uppercase">Advanced</span>
+                <div class="w-10 h-10 bg-red-50 text-red-600 flex items-center justify-center rounded-lg mb-4"><i data-lucide="umbrella"></i></div>
+                <h4 class="font-bold mb-2">Retirement & Pension Wealth</h4>
+                <p class="text-slate-500 text-xs mb-6">Plan for a comfortable and inflation-proof retirement</p>
+                <div class="text-[10px] text-slate-400 mb-6"><i data-lucide="clock" class="inline w-3 h-3 mr-1"></i> 5 hrs</div>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-xl font-medium hover:bg-blue-700 transition">Start Learning</button>
+            </div>
+
+            <div class="course-card bg-white p-6 rounded-2xl relative">
+                <span class="absolute top-4 right-4 text-[10px] badge-intermediate px-2 py-1 rounded font-bold uppercase">Advanced</span>
+                <div class="w-10 h-10 bg-yellow-50 text-yellow-600 flex items-center justify-center rounded-lg mb-4"><i data-lucide="bitcoin"></i></div>
+                <h4 class="font-bold mb-2">Cryptocurrency & Web3 Basics</h4>
+                <p class="text-slate-500 text-xs mb-6">Safely navigating the world of decentralized finance</p>
+                <div class="text-[10px] text-slate-400 mb-6"><i data-lucide="clock" class="inline w-3 h-3 mr-1"></i> 3.5 hrs</div>
+                <button class="w-full bg-blue-600 text-white py-2 rounded-xl font-medium hover:bg-blue-700 transition">Start Learning</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

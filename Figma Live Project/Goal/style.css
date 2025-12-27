@@ -1,0 +1,61 @@
+:root {
+    --primary: #2563eb;
+    --primary-light: #eff6ff;
+    --bg-body: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+}
+
+body.finova-light-theme {
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.dashboard-wrapper { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+
+/* Section Header */
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+.header-text h1 { font-size: 2rem; font-weight: 800; margin: 0; }
+
+.btn-create-solid {
+    background: var(--primary); color: white; border: none; padding: 12px 24px;
+    border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; gap: 8px;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* Goals Grid (Image 1) */
+.goals-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; margin-bottom: 40px; }
+
+.goal-card {
+    background: var(--card-bg); padding: 25px; border-radius: 24px;
+    border: 1px solid var(--border); box-shadow: var(--shadow);
+}
+
+.card-top { display: flex; gap: 15px; margin-bottom: 20px; align-items: center; }
+.icon-box { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+.icon-box.blue { background: var(--primary-light); color: var(--primary); }
+
+.progress-track { height: 8px; background: #f1f5f9; border-radius: 10px; margin: 15px 0; overflow: hidden; }
+.progress-fill { height: 100%; background: var(--primary); border-radius: 10px; }
+
+/* Analytics Section (Image 2) */
+.analytics-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+.chart-card, .summary-card { background: white; padding: 30px; border-radius: 24px; border: 1px solid var(--border); box-shadow: var(--shadow); }
+
+.chart-box { height: 280px; margin-top: 20px; }
+
+/* Sidebar Drawer (Image 3) */
+.drawer-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.4); backdrop-filter: blur(4px); visibility: hidden; opacity: 0; transition: 0.3s; z-index: 1000; }
+.drawer-overlay.active { visibility: visible; opacity: 1; }
+.drawer-panel { position: absolute; right: 0; top: 0; width: 420px; height: 100%; background: white; padding: 40px; transform: translateX(100%); transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+.drawer-overlay.active .drawer-panel { transform: translateX(0); }
+
+.fin-input { width: 100%; padding: 14px; border: 1.5px solid var(--border); border-radius: 12px; font-size: 1rem; margin-top: 8px; outline: none; transition: 0.2s; }
+.fin-input:focus { border-color: var(--primary); box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1); }
+
+.btn-submit-full { width: 100%; background: var(--primary); color: white; padding: 16px; border-radius: 14px; font-weight: 700; border: none; margin-top: 25px; cursor: pointer; }

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FINOVA AI | Personal Coach</title>
+    <link rel="stylesheet" href="coach-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-gray">
+    <main class="coach-container">
+        <header class="coach-header">
+            <div class="title-area">
+                <i data-lucide="brain" class="icon-primary"></i>
+                <div>
+                    <h1>AI Financial Coach</h1>
+                    <p>Personalized advice powered by Finova Intelligence</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="coach-grid">
+            <section class="card chat-card">
+                <div class="card-header">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="sparkles" class="icon-purple"></i>
+                        <h3>Chat with Your Coach</h3>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chat-window">
+                    <div class="msg ai">
+                        <div class="bot-label"><i data-lucide="brain"></i> AI Coach</div>
+                        <p>Hello! I'm your AI Coach. I've analyzed your data and noticed you're doing great with your savings rate. How can I help you optimize your money today?</p>
+                        <span class="time" id="current-time"></span>
+                    </div>
+                </div>
+
+                <div class="quick-suggestions" id="suggestions-box">
+                    <button onclick="sendQuick('How can I reduce food spending?')">Reduce Food Spending</button>
+                    <button onclick="sendQuick('Am I on track with my vacation goal?')">Vacation Goal Status</button>
+                    <button onclick="sendQuick('Show me biggest expenses')">Biggest Expenses</button>
+                </div>
+
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Ask me anything about your finances...">
+                    <button id="send-btn" class="btn-primary">
+                        <i data-lucide="send"></i>
+                    </button>
+                </div>
+            </section>
+
+            <aside class="side-panel">
+                <div class="card panel-card">
+                    <h3>Active Insights</h3>
+                    <div class="insight-list">
+                        <div class="insight-item blue">
+                            <i data-lucide="trending-up"></i>
+                            <div>
+                                <strong>Spending Increase</strong>
+                                <p>Food expenses up 12% this month</p>
+                            </div>
+                        </div>
+                        <div class="insight-item green">
+                            <i data-lucide="target"></i>
+                            <div>
+                                <strong>Goal on Track</strong>
+                                <p>Vacation fund 67% complete</p>
+                            </div>
+                        </div>
+                        <div class="insight-item orange">
+                            <i data-lucide="alert-circle"></i>
+                            <div>
+                                <strong>Optimization Alert</strong>
+                                <p>3 unused subscriptions detected</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card panel-card">
+                    <h3>AI Agents Active</h3>
+                    <div class="agent-list">
+                        <div class="agent"><span>Spending Analyst</span> <span class="dot green"></span></div>
+                        <div class="agent"><span>Investment Analyst</span> <span class="dot green"></span></div>
+                        <div class="agent"><span>Goal Planner</span> <span class="dot green"></span></div>
+                        <div class="agent"><span>Financial Coach</span> <span class="dot green"></span></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="coach-logic.js"></script>
+</body>
+</html>

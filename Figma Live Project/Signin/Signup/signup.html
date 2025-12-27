@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Account - FINOVA</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="auth-page">
+    <div class="auth-card">
+        <a href="index.html" class="back-link"><i data-lucide="arrow-left"></i> Back to Dashboard</a>
+        <h2>Create Account</h2>
+        <p class="auth-subtitle">Start your journey with FINOVA today</p>
+        
+        <form id="registerForm" action="index.html">
+            <div class="input-row">
+                <div class="input-group">
+                    <label>First Name</label>
+                    <input type="text" placeholder="John" required>
+                </div>
+                <div class="input-group">
+                    <label>Last Name</label>
+                    <input type="text" placeholder="Doe" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="name@company.com" required>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" placeholder="Min. 8 characters" minlength="8" required>
+            </div>
+            <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a>.</p>
+            <button type="submit" class="btn-primary-full">Create Free Account</button>
+        </form>
+        <p class="switch-auth">Already have an account? <a href="signin.html">Sign in</a></p>
+    </div>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
