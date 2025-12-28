@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
     <title>FINOVA | Smarter Money Decisions</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -19,8 +21,8 @@
                 <button id="theme-toggle" class="btn-icon">
                     <i data-lucide="moon"></i>
                 </button>
-                <button class="btn-outline">Sign In</button>
-                <button class="btn-gradient">Get Started</button>
+                <a class="btn-outline" href="Signin/Signup/signin.html">Sign In</a>
+                <a class="btn-gradient" href="Signin/Signup/signup.html">Get Started</a>
             </nav>
         </div>
     </header>
@@ -33,7 +35,7 @@
             </h1>
             <p class="hero-subtitle">Goal-driven personal finance planning for students and young professionals.</p>
             <div class="hero-btns">
-                <button class="btn-gradient lg">Get Started <i data-lucide="arrow-right"></i></button>
+                <a class="btn-gradient lg" href="Signin/Signup/signup.html">Get Started <i data-lucide="arrow-right"></i></a>
                 <button class="btn-white lg"><i data-lucide="smartphone"></i> View Live App Demo</button>
             </div>
         </div>
@@ -98,10 +100,10 @@
                     <p>Track spending trends, identify patterns, and optimize habits with AI-driven analysis and personalized tips</p>
                 </div>
                 <div class="feature-card bl-red" >
-                    <i data-lucide="target"></i>
+                    <i data-lucide="bot"></i>
                     <h3>AI Financial Coach</h3>
-                    <p>Get personalized advice and recommendations through an interactive AI assistant that understands your financial goals</p>
-            </div>
+                    <p>Personalized guidance, budgeting tips, and action plans to reach your goals faster.</p>
+                </div>
         </div>
     </section>
 
@@ -111,9 +113,7 @@
 
     <!-- Header -->
     <div class="section-header">
-      <span class="badge">
-        🌐 Multi-Agent AI System
-      </span>
+      <span class="badge"><i data-lucide="globe-2"></i> Multi-Agent AI System</span>
 
       <h2>Intelligent Agent Collaboration</h2>
 
@@ -127,31 +127,31 @@
     <div class="agent-grid">
 
       <div class="agent-card blue">
-        <div class="icon">📊</div>
+        <div class="icon"><i data-lucide="bar-chart-2"></i></div>
         <h3>Spending Analysis Agent</h3>
         <p>Tracks expenses, identifies patterns, and categorizes spending behavior</p>
       </div>
 
       <div class="agent-card green">
-        <div class="icon">📈</div>
+        <div class="icon"><i data-lucide="trending-up"></i></div>
         <h3>Investment Intelligence Agent</h3>
         <p>Analyzes portfolio, assesses risk, and optimizes allocation strategies</p>
       </div>
 
       <div class="agent-card purple">
-        <div class="icon">🎯</div>
+        <div class="icon"><i data-lucide="target"></i></div>
         <h3>Goal Planning Agent</h3>
         <p>Creates roadmaps, tracks progress, and adjusts timelines dynamically</p>
       </div>
 
       <div class="agent-card orange">
-        <div class="icon">🔔</div>
+        <div class="icon"><i data-lucide="shield-alert"></i></div>
         <h3>Risk & Alert Agent</h3>
         <p>Monitors risks, detects anomalies, and sends proactive alerts</p>
       </div>
 
       <div class="agent-card pink">
-        <div class="icon">💡</div>
+        <div class="icon"><i data-lucide="bot"></i></div>
         <h3>Financial Coach Agent</h3>
         <p>Provides personalized advice and actionable recommendations</p>
       </div>
@@ -160,7 +160,7 @@
 
     <!-- Shared Context -->
     <div class="shared-context">
-      <h3>🌐 Shared Intelligence Context</h3>
+      <h3><i data-lucide="globe-2"></i> Shared Intelligence Context</h3>
       <p>
         All agents share context through an MCP-style architecture, ensuring recommendations
         are holistic, consistent, and aligned with your complete financial picture
@@ -189,7 +189,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                © 2024 FINOVA. All rights reserved.
+                &copy; 2024 FINOVA. All rights reserved.
             </div>
         </div>
     </footer>

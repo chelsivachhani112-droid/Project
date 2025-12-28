@@ -1,41 +1,129 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Create Account - FINOVA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - InnovAltion</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="auth-page">
-    <div class="auth-card">
-        <a href="index.html" class="back-link"><i data-lucide="arrow-left"></i> Back to Dashboard</a>
-        <h2>Create Account</h2>
-        <p class="auth-subtitle">Start your journey with FINOVA today</p>
+    <!-- Header with InnovAltion branding -->
+    <header class="auth-header">
+        <div class="auth-nav">
+            <div class="logo-section">
+                <div class="logo-blue">
+                    <div class="logo-circle blue"></div>
+                    <span>InnovAltion</span>
+                </div>
+                <div class="logo-purple">
+                    <div class="logo-triangle purple"></div>
+                    <span>FINMATRIX</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Sign Up Content -->
+    <main class="auth-main">
+        <div class="auth-container">
+            <div class="auth-card">
+                <!-- Tab Navigation -->
+                <div class="auth-tabs">
+                    <button class="tab-btn" data-tab="signin">Sign In</button>
+                    <button class="tab-btn active" data-tab="signup">Sign Up</button>
+                </div>
+
+                <!-- Sign In Form (Hidden by default) -->
+                <div class="tab-content" id="signin-tab">
+                    <h2>Welcome Back</h2>
+                    <p class="auth-subtitle">User login interface to access the platform</p>
+                    
+                    <form id="loginForm" action="../../Goal/goals.html">
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Enter your password" minlength="8" required>
+                        </div>
+                        <div class="auth-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox"> 
+                                <span class="checkmark"></span>
+                                Remember me
+                            </label>
+                            <a href="#" class="forgot-link">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn-primary-full">
+                            <span>Sign In</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Sign Up Form -->
+                <div class="tab-content active" id="signup-tab">
+                    <h2>Create Account</h2>
+                    <p class="auth-subtitle">Encrypted Personal Account Creation</p>
+                    
+                    <form id="registerForm" action="../../Goal/goals.html">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="Create a strong password" minlength="8" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Confirm Password</label>
+                            <input type="password" placeholder="Confirm your password" minlength="8" required>
+                        </div>
+                        <div class="auth-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox"> 
+                                <span class="checkmark"></span>
+                                I agree to the Terms of Service
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary-full">
+                            <span>Sign Up</span>
+                            <i data-lucide="user-plus"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        lucide.createIcons();
         
-        <form id="registerForm" action="index.html">
-            <div class="input-row">
-                <div class="input-group">
-                    <label>First Name</label>
-                    <input type="text" placeholder="John" required>
-                </div>
-                <div class="input-group">
-                    <label>Last Name</label>
-                    <input type="text" placeholder="Doe" required>
-                </div>
-            </div>
-            <div class="input-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="name@company.com" required>
-            </div>
-            <div class="input-group">
-                <label>Password</label>
-                <input type="password" placeholder="Min. 8 characters" minlength="8" required>
-            </div>
-            <p class="terms">By signing up, you agree to our <a href="#">Terms of Service</a>.</p>
-            <button type="submit" class="btn-primary-full">Create Free Account</button>
-        </form>
-        <p class="switch-auth">Already have an account? <a href="signin.html">Sign in</a></p>
-    </div>
-    <script>lucide.createIcons();</script>
+        // Tab switching functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.dataset.tab;
+                
+                // Remove active class from all tabs and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                btn.classList.add('active');
+                document.getElementById(`${tabName}-tab`).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
+

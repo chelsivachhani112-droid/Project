@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <title>Financial Goals | InnovAltion</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="finova-light-theme">
+
+    <!-- Header with InnovAltion branding -->
+    <header class="page-header">
+        <div class="header-nav">
+            <div class="logo-section">
+                <div class="logo-blue">
+                    <div class="logo-circle blue"></div>
+                    <span>InnovAltion</span>
+                </div>
+                <div class="logo-purple">
+                    <div class="logo-triangle purple"></div>
+                    <span>FINMATRIX</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="../index.html">Dashboard</a>
+                <a href="goals.html" class="active">Goals</a>
+                <a href="#">Transactions</a>
+                <a href="#">Analytics</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-wrapper">
+        <header class="page-header-content">
+            <div class="header-text">
+                <h1>Financial Goals</h1>
+                <p>Monthly Goal Performance & Tracking</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn-export-outline"><i data-lucide="download"></i> Export</button>
+                <button class="btn-create-solid" onclick="toggleDrawer(true)">
+                    <i data-lucide="plus-circle"></i> Create New Goal
+                </button>
+            </div>
+        </header>
+
+        <section class="goals-grid" id="goals-container">
+            </section>
+
+        <div class="analytics-layout">
+            <section class="chart-card shadow-soft">
+                <div class="card-header">
+                    <h3>Savings Projections</h3>
+                    <div class="legend-pills">
+                        <span class="pill current">Current</span>
+                        <span class="pill target">Target</span>
+                    </div>
+                </div>
+                <div class="chart-box">
+                    <canvas id="savingsChart"></canvas>
+                </div>
+            </section>
+
+            <section class="summary-card shadow-soft">
+                <h3>Goal Health</h3>
+                <div class="health-metric">
+                    <div class="metric-circle" id="overall-progress">0%</div>
+                    <p>Average progress across all active milestones.</p>
+                </div>
+                <div class="quick-stats">
+                    <div class="stat-item">
+                        <span class="label">Total Targets</span>
+                        <span class="value" id="stat-total">&#8377;0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="label">Total Saved</span>
+                        <span class="value text-blue" id="stat-saved">&#8377;0</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="drawer-overlay" class="drawer-overlay" onclick="toggleDrawer(false)">
+        <div class="drawer-panel" onclick="event.stopPropagation()">
+            <div class="drawer-head">
+                <h2>Set Milestone</h2>
+                <button class="close-btn" onclick="toggleDrawer(false)">&times;</button>
+            </div>
+
+            <form id="goal-form" onsubmit="handleFormSubmit(event)">
+                <div class="field-group">
+                    <label>Goal Name</label>
+                    <input type="text" id="g-name" placeholder="e.g. Vacation Fund" class="fin-input" required>
+                </div>
+
+                <div class="field-row">
+                    <div class="field-group">
+                        <label>Target (&#8377;)</label>
+                        <input type="number" id="g-target" placeholder="50,000" class="fin-input" required>
+                    </div>
+                    <div class="field-group">
+                        <label>Initial (&#8377;)</label>
+                        <input type="number" id="g-current" placeholder="5,000" class="fin-input" required>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label>Theme Color</label>
+                    <div class="color-picker">
+                        <input type="radio" name="color" id="c-blue" value="blue" checked>
+                        <label for="c-blue" class="swatch blue"></label>
+                        <input type="radio" name="color" id="c-green" value="green">
+                        <label for="c-green" class="swatch green"></label>
+                        <input type="radio" name="color" id="c-purple" value="purple">
+                        <label for="c-purple" class="swatch purple"></label>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <label>Target Date</label>
+                    <input type="date" id="g-date" class="fin-input" required>
+                </div>
+
+                <button type="submit" class="btn-submit-full">Create Goal Strategy</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="goals.js"></script>
+</body>
+</html>

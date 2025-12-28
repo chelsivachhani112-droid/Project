@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In - InnovAltion</title>
+    <title>Sign Up - InnovAltion</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -25,18 +25,18 @@
         </div>
     </header>
 
-    <!-- Main Sign In Content -->
+    <!-- Main Sign Up Content -->
     <main class="auth-main">
         <div class="auth-container">
             <div class="auth-card">
                 <!-- Tab Navigation -->
                 <div class="auth-tabs">
-                    <button class="tab-btn active" data-tab="signin">Sign In</button>
-                    <button class="tab-btn" data-tab="signup">Sign Up</button>
+                    <button class="tab-btn" data-tab="signin">Sign In</button>
+                    <button class="tab-btn active" data-tab="signup">Sign Up</button>
                 </div>
 
-                <!-- Sign In Form -->
-                <div class="tab-content active" id="signin-tab">
+                <!-- Sign In Form (Hidden by default) -->
+                <div class="tab-content" id="signin-tab">
                     <h2>Welcome Back</h2>
                     <p class="auth-subtitle">User login interface to access the platform</p>
                     
@@ -64,8 +64,8 @@
                     </form>
                 </div>
 
-                <!-- Sign Up Form (Hidden by default) -->
-                <div class="tab-content" id="signup-tab">
+                <!-- Sign Up Form -->
+                <div class="tab-content active" id="signup-tab">
                     <h2>Create Account</h2>
                     <p class="auth-subtitle">Encrypted Personal Account Creation</p>
                     
@@ -86,6 +86,13 @@
                             <label>Confirm Password</label>
                             <input type="password" placeholder="Confirm your password" minlength="8" required>
                         </div>
+                        <div class="auth-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox"> 
+                                <span class="checkmark"></span>
+                                I agree to the Terms of Service
+                            </label>
+                        </div>
                         <button type="submit" class="btn-primary-full">
                             <span>Sign Up</span>
                             <i data-lucide="user-plus"></i>
@@ -97,27 +104,26 @@
     </main>
 
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
         
-        // Tab functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-btn');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons and contents
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-                    
-                    // Add active class to clicked button and its content
-                    button.classList.add('active');
-                    const targetTab = button.getAttribute('data-tab');
-                    document.getElementById(`${targetTab}-tab`).classList.add('active');
-                });
+        // Tab switching functionality
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabName = btn.dataset.tab;
+                
+                // Remove active class from all tabs and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                btn.classList.add('active');
+                document.getElementById(`${tabName}-tab`).classList.add('active');
             });
         });
     </script>
 </body>
 </html>
+

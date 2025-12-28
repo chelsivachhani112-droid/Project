@@ -1,4 +1,29 @@
-let goals = JSON.parse(localStorage.getItem('finova_goals')) || [];
+let goals = JSON.parse(localStorage.getItem('finova_goals')) || [
+    {
+        id: 1,
+        name: "Emergency Fund",
+        target: 100000,
+        current: 65000,
+        color: "blue",
+        date: "2024-12-31"
+    },
+    {
+        id: 2,
+        name: "New Car",
+        target: 500000,
+        current: 120000,
+        color: "green",
+        date: "2025-06-30"
+    },
+    {
+        id: 3,
+        name: "Vacation Fund",
+        target: 75000,
+        current: 45000,
+        color: "purple",
+        date: "2024-08-15"
+    }
+];
 let myChart;
 
 function toggleDrawer(show) {

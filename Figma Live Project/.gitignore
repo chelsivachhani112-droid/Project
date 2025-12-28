@@ -1,0 +1,14 @@
+# General
+.DS_Store
+Thumbs.db
+*.log
+
+# Node/JS (in case present)
+node_modules/
+dist/
+build/
+.cache/
+
+# OS/Editors
+.vscode/
+*.tmp

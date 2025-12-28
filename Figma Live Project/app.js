@@ -22,8 +22,17 @@ themeBtn.addEventListener('click', () => {
 });
 
 // Smooth Scroll for buttons (Placeholder)
-document.querySelectorAll('.btn-gradient').forEach(btn => {
+document.querySelectorAll('button.btn-gradient').forEach(btn => {
     btn.addEventListener('click', () => {
         alert("Redirecting to Get Started flow...");
     });
 });
+
+// Register Service Worker for PWA/offline support
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js').catch(() => {
+            // silent failure
+        });
+    });
+}
