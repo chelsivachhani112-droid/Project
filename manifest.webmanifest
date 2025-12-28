@@ -1,18 +1,18 @@
 {
-  "name": "FINOVA",
-  "short_name": "FINOVA",
+  "name": "InnovAltion",
+  "short_name": "InnovAltion",
   "description": "Smarter money decisions. Goal-driven personal finance planning.",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
   "icons": [
     {
-      "src": "logo.jpg",
+      "src": "https://i.ibb.co/4gB6J1T/logo.jpg",
       "sizes": "512x512",
       "type": "image/jpeg",
-      "purpose": "any"
+      "purpose": "any maskable"
     }
   ]
 }
