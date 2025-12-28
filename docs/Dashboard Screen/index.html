@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="input-section">
+            <h2>Add Custom Data</h2>
+            <div class="form-group">
+                <label>Monthly Income ($)</label>
+                <input type="number" id="incomeInput" value="5000">
+            </div>
+            <div class="form-group">
+                <label>Add Expense (Month, Amount)</label>
+                <input type="text" id="expMonth" placeholder="e.g. July">
+                <input type="number" id="expAmount" placeholder="3000">
+                <button onclick="addExpense()">Add to Trend</button>
+            </div>
+            <div class="form-group">
+                <label>Update Investment (Stocks %)</label>
+                <input type="number" id="stockValue" value="45">
+                <button onclick="updateInvestments()">Update Chart</button>
+            </div>
+        </aside>
+
+        <main class="dashboard">
+            <header>
+                <h1>Welcome back, <span id="displayUser">User</span></h1>
+                <p>Financial Health Score: <span id="healthScore">85</span>/100</p>
+            </header>
+
+            <div class="stats-grid">
+                <div class="card">
+                    <h3>Net Savings</h3>
+                    <p id="netSavingsText">$0</p>
+                </div>
+                <div class="card">
+                    <h3>Expense Ratio</h3>
+                    <p id="expenseRatioText">0%</p>
+                </div>
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Monthly Spending Trend</h3>
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Investment Allocation</h3>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
